@@ -44,6 +44,13 @@ LogFileMgtController@RequestMapping("/ajaxLogFileListSearch") -> LogFileMgtServi
 			
 		}
 		System.out.println(isDir);
+
+//		====================================================================================
+		/*
+		 * isDirStr = isDirStr.replaceAll("[..,./]", "");
+		 * 이것만 있어도 동작 가능
+		 * */
+//		====================================================================================
 //		=====경로조작 및 자원삽입 취약점 방어코드 끝
 		return isDir;
 	}
