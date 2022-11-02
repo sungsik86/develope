@@ -1,0 +1,49 @@
+경로순회 취약점 방어코드 관련
+
+list 출력
+
+LogFileMgtController@RequestMapping("/ajaxLogFileListSearch") -> LogFileMgtService.getLogFileList
+
+		String isDir = paramMap.get("selectedDir").equals("root") ? dirPath: dirPath.concat("/").concat(((String)paramMap.get("selectedDir")).replace("..", ""));
+		Map<String, Object> resultMap = new HashMap<String,Object>();        
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		int ListCnt =0;
+		
+		...
+		
+		...
+		
+		
+
+	public String directoryTraversal(String isDir) throws Exception{
+
+//		파일도 같이 사용 가능하도록 변경해야함.
+		/*
+		 * 참고
+		 * isDir.replaceAll("\\.{2}[/\\\\]","");
+		 * */
+//		=====경로조작 및 자원삽입 취약점 방어코드 시작
+		if(isDir.equals("/root") || isDir.equals("/")) {
+			//application.yml의 log경로 또는 해당변수가 조작 되었을 경우를 대비하여 고객사log경로 하드코딩
+			isDir = "/shdslog/smmsdomain";
+		}else if(isDir.contains("..") || isDir.contains("./")){
+			int isDirLength = isDir.split("/").length;
+			String [] strList = new String[isDirLength];
+			strList = isDir.split("/");
+			isDir="";
+			for(String isDirStr : strList) {
+				isDirStr+="/";
+				if(isDirStr.equals("")) {}else {
+					if(isDirStr.contains(".")) {
+						isDirStr = isDirStr.replaceAll("[..,./]", "");
+						if(isDirStr.equals("")){}else{isDir += isDirStr;}
+					}else {isDir += isDirStr;}
+				}
+			}
+		}else {
+			
+		}
+		System.out.println(isDir);
+//		=====경로조작 및 자원삽입 취약점 방어코드 끝
+		return isDir;
+	}
