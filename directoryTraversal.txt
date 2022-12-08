@@ -13,6 +13,8 @@ LogFileMgtController@RequestMapping("/ajaxLogFileListSearch") -> LogFileMgtServi
 		
 		...
 		
+		...
+		
 		
 
 	public String directoryTraversal(String isDir, String ...isFileNm) throws Exception{
