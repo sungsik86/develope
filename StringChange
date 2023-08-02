@@ -6,7 +6,7 @@ class Solution {
 }
 
 /*
-indexOf(String a) = a의 문자의 위치 값을 숫자를 얻는다.
+indexOf(String a) = a의 문자의 위치 값을 숫자를 얻는다. 
 
 lastindexOf(String a) =  a 문자를 뒤에서부터 찾아 위치 값 숫자를 얻는다.
 
