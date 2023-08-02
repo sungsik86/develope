@@ -22,3 +22,14 @@ Char charAt(int index) = String 문자열에서 index 번째 문자 값 1개를 
 
 int indexOf(String str) = 문자열 str를 찾아서 존재하면 첫째 문자 위치 값을 반환, 없으면 -1을 반환한다.
 */
+
+// 구분자로 자르기 .split("")
+import java.util.*;
+
+class Solution {
+    public String[] solution(String my_string) {
+        String[] answer =my_string.split(" ");
+        
+        return answer;
+    }
+}
