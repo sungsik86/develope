@@ -9,6 +9,7 @@ class Solution {
             System.out.print(my_string.charAt(i));
             myString[i] = my_string.charAt(i);
         }
+        
         for(int a : index_list){
             char k = myString[a];
             answer += k;
