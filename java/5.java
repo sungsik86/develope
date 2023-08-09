@@ -10,6 +10,7 @@ class Solution {
             }
             i++;
         }
+        
         String[] answer = new String[strList.size()];
         answer = strList.toArray(answer);
         return answer;
