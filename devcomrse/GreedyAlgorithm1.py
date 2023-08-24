@@ -7,6 +7,6 @@ def solution(n, lost, reserve):
 	for i in range(1, n + 1):
 		if u[i - 1] == 0 and u[i] == 2:
 			u[i - 1:i+1] = [1, 1]
-		elif u[i] == and u[i + 1] ==0:
+		elif u[i] == 2 and u[i + 1] ==0:
 			u[i:i +2] = [1, 1]
 	return len([x for x in u[1: -1] if x > 0])
