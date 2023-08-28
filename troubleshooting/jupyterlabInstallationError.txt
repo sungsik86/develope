@@ -1,0 +1,12 @@
+windows jupyter lab 설치 중 오류 
+
+ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'OpenSSL 1.1.0j  20 Nov 2018'. See: https://github.com/urllib3/urllib3/issues/2168
+
+해결 : pip install urllib3==1.26.6
+
+
+python 버전과 urllib3의 버전이 맞지 않아 발생하는 문제
+
+'sudo python3.8 -m pip install urllib3==1.26.6'
+
+이렇게 하면 pip를 사용하여 특정 버전을 설치할 수 있습니다.
