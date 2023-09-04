@@ -1,0 +1,34 @@
+git : 분산 버전 관리 시스템
+
+git 설치
+로컬저장소 생성 : git init
+
+commit
+git statat
+git add example.py
+git status
+git commit -m "added example.py"
+
+Branch 
+위치 확인
+git branch -v
+
+branch 생성
+git branch <branch_name>
+
+위치 변경
+git checkout <branch_name>
+
+병합
+git merge <branch_name>
+master를 develop의 변경사항으로 덮어쓰기
+head를 master로 변경
+git checkout master
+
+git merge develop
+
+branch 삭제
+git branch -d <branch_name>
+
+로그 확인
+git log
