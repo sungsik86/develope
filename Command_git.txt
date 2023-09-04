@@ -41,3 +41,10 @@ git remote add <원격저장소 이름:ex)origin> <원격저장소주소>
 
 #push 
 git push <remote_repo_name> <branch_name>
+
+#clone
+#public
+git clone <repo_uri> <directory> or git clone <repo_uri>
+#privite(uri 앞에 user_name을 작성)
+git clone <https://user_name@repo_uri> <directory> or git clone <https://user_name@repo_uri>
+
