@@ -1,4 +1,4 @@
-package com.shinhands.smms.database;
+package com.test.test.database;
 
 import javax.sql.DataSource;
 
